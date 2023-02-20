@@ -1,0 +1,10 @@
+Arkadaşlar selamunaleykum, 
+bildiginiz gibi AppBeyoglu adinda bir uygulama yapiyoruz 
+(hala isim onerilerine acigiz)
+ve bu hafta bir demosunu gerceklestirecegiz. 
+Bunu hem uygulamayi denemek hem de daha once 
+karsilasmadigimiz bazi buglari gormek icin yapacagiz. 5 gun 
+boyunca kurye, satici veya alici olmak isteyenler bana yazabilir.
+
+Bilmeyenler icin AppBeyoglu, BAIHL icerisinde bir 
+sosyal medya ve market uygulamasi.

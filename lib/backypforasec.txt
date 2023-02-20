@@ -1,0 +1,74 @@
+
+
+ SizedBox(
+                      child: ListView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        itemCount: cartSnapshot.data!.docs.length,
+                        itemBuilder: (context, index) {
+                          String price =
+                              cartSnapshot.data!.docs[index]['productPrice'];
+                          return Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.network(
+                                        cartSnapshot.data!.docs[index]['image'],
+                                        height: 70,
+                                        fit: BoxFit.cover,
+                                      )),
+                                  index + 1 == cartSnapshot.data!.docs.length
+                                      ? const SizedBox(
+                                          height: 10,
+                                        )
+                                      : Container(
+                                          color: Colors.grey,
+                                          width: 3,
+                                          height: 25,
+                                        ),
+                                ],
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                cartSnapshot.data!.docs[index]['productTitle'],
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              Text(
+                                '$price ₺',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              Container(
+                                height: 35,
+                                width: 35,
+                                padding: EdgeInsets.all(7),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey[900],
+                                    borderRadius: BorderRadius.circular(5)),
+                                child: Center(
+                                  child: Text(
+                                    'x${cartSnapshot.data!.docs[index]['myQuantity']}',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 18),
+                                  ),
+                                ),
+                              )
+                            ],
+                          );
+                        },
+                      ),
+                    ),

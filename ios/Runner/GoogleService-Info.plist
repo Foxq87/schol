@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>256943613795-61ikmuh7kmplsj0cm3lplbqrjgo32kdb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.256943613795-61ikmuh7kmplsj0cm3lplbqrjgo32kdb</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>256943613795-9kg09in3nmgpmpdfabrnsfbfoci58o8p.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA1Z5Iy97xhoyUR1fJzxalEW8pfU97Sw0g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>256943613795</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cal.appbeyoglu</string>
+	<key>PROJECT_ID</key>
+	<string>appbeyoglu</string>
+	<key>STORAGE_BUCKET</key>
+	<string>appbeyoglu.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:256943613795:ios:3dd04555330211db8bd556</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-9838840200304232~9413921596</string>
+</dict>
+</plist>

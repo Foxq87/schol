@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "256943613795",
+    "project_id": "appbeyoglu",
+    "storage_bucket": "appbeyoglu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256943613795:android:149f50e5cff2f59f8bd556",
+        "android_client_info": {
+          "package_name": "com.cal.appbeyoglu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256943613795-9kg09in3nmgpmpdfabrnsfbfoci58o8p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cal.appbeyoglu",
+            "certificate_hash": "614645a4906f0ff1b1e737b96136043daeca649d"
+          }
+        },
+        {
+          "client_id": "256943613795-djdabp8v6108ntm8jq1a0tq256gbb7p0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cal.appbeyoglu",
+            "certificate_hash": "39c119372e977fb3b3d29ed2960f1b82c405e802"
+          }
+        },
+        {
+          "client_id": "256943613795-q89vml0bdscrgmuc9t7asojsagoiek0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB13XAt1HFpA1HBc469uKYnj9yAJKsnBKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256943613795-q89vml0bdscrgmuc9t7asojsagoiek0e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "256943613795-29cc705crac16cnt76qb2ap7t2vo4mk9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cal.appbeyoglu"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

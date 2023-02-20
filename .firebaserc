@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "appbeyoglu",
+    "AppBeyoglu": "appbeyoglu"
+  },
+  "targets": {},
+  "etags": {}
+}
