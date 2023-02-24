@@ -1,4 +1,4 @@
-import '/models/pages/create.dart';
+import '../pages/create.dart';
 import '/widgets/loading.dart';
 import '/models/post_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '/constants.dart';
 import '/models/user_model.dart';
-import '/models/pages/account.dart';
-import '/models/pages/root.dart';
+import '../pages/account.dart';
+import '../pages/root.dart';
 import 'app_bar.dart';
 
 class Product extends StatefulWidget {
@@ -48,7 +48,6 @@ class Product extends StatefulWidget {
         description: description,
         quantity: quantity,
         approve: approve,
-        isLoaded: isLoaded,
       );
 }
 
@@ -62,9 +61,7 @@ class _ProductState extends State<Product> {
   String imageUrl;
   int quantity;
   int approve;
-  bool? isLoaded;
   _ProductState({
-    this.isLoaded,
     required this.description,
     required this.type,
     required this.productId,
@@ -112,18 +109,12 @@ class _ProductState extends State<Product> {
                     borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(15),
                         topRight: Radius.circular(15)),
-                    child: isLoaded! == false
-                        ? Container(
-                            height: 120,
-                            width: 250,
-                            color: kdarkGreyColor,
-                          )
-                        : Image.network(
-                            widget.imageUrl,
-                            height: 120,
-                            width: 250,
-                            fit: BoxFit.cover,
-                          )),
+                    child: Image.network(
+                      widget.imageUrl,
+                      height: 120,
+                      width: 250,
+                      fit: BoxFit.cover,
+                    )),
               ),
               const SizedBox(
                 height: 7,
@@ -152,37 +143,29 @@ class _ProductState extends State<Product> {
                           const SizedBox(
                             width: 10,
                           ),
-                          isLoaded! == false
-                              ? Container(
-                                  height: 20,
-                                  width: 250,
-                                  decoration: BoxDecoration(
-                                      color: kdarkGreyColor,
-                                      borderRadius: BorderRadius.circular(10)),
-                                )
-                              : Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SizedBox(
-                                      width: 53,
-                                      child: Text(
-                                        widget.title,
-                                        style: const TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 12,
-                                            fontFamily: 'poppinsBold'),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                    Text('${widget.price} ₺',
-                                        style: const TextStyle(
-                                            color: Colors.grey, fontSize: 11)),
-                                    // Text('@ ' + user.username,
-                                    //     style: TextStyle(
-                                    //         color: Colors.grey, fontSize: 11)),
-                                  ],
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: 53,
+                                child: Text(
+                                  widget.title,
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontFamily: 'poppinsBold'),
+                                  overflow: TextOverflow.ellipsis,
                                 ),
+                              ),
+                              Text('${widget.price} ₺',
+                                  style: const TextStyle(
+                                      color: Colors.grey, fontSize: 11)),
+                              // Text('@ ' + user.username,
+                              //     style: TextStyle(
+                              //         color: Colors.grey, fontSize: 11)),
+                            ],
+                          ),
                         ],
                       );
                     }),

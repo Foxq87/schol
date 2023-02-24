@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '/constants.dart';
 import '/models/user_model.dart';
-import '/models/pages/root.dart';
+import '../pages/root.dart';
 
 import 'app_bar.dart';
 

@@ -5,8 +5,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '/models/pages/cart.dart';
-import '/models/pages/root.dart';
+import '../pages/cart.dart';
+import '../pages/root.dart';
 
 appBar(
   String title,

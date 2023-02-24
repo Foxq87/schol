@@ -9,14 +9,14 @@ import 'package:uuid/uuid.dart';
 
 import '/widgets/loading.dart';
 
-import '/models/pages/chat_page.dart';
+import '../pages/chat_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '/constants.dart';
 import '/models/user_model.dart';
-import '/models/pages/root.dart';
+import '../pages/root.dart';
 
 class Order extends StatefulWidget {
   int? index;
@@ -1306,7 +1306,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                                 doc.reference.update({
                                                   "isApproved":
                                                       FieldValue.arrayUnion(
-                                                          [currentUser.id]),
+                                                          [Uuid().v4()]),
                                                   "isAccepted": true,
                                                   "vendorsNote":
                                                       noteController.text,

@@ -10,8 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-import 'pages/account.dart';
-import 'pages/root.dart';
+import '../pages/account.dart';
+import '../pages/root.dart';
 import 'comment_sheet.dart';
 import 'user_model.dart';
 
@@ -126,6 +126,8 @@ class _PostDetailState extends State<PostDetail> {
           .collection('userPosts')
           .doc(postId)
           .update({"likes.${currentUser.id}": false});
+      exploreRef.doc(postId).update({"likes.${currentUser.id}": false});
+
       removeLikeFromActivityFeed();
       setState(() {
         likeCount -= 1;
@@ -138,6 +140,8 @@ class _PostDetailState extends State<PostDetail> {
           .collection('userPosts')
           .doc(postId)
           .update({"likes.${currentUser.id}": true});
+      exploreRef.doc(postId).update({"likes.${currentUser.id}": true});
+
       // addLikeToActivityFeed();
       bool isNotPostOwner = ownerId != currentUser.id;
       if (isNotPostOwner) {
@@ -146,11 +150,11 @@ class _PostDetailState extends State<PostDetail> {
             .collection('userNotifications')
             .doc(postId)
             .set({
-      "type": "like",
+          "type": "like",
           "username": currentUser.username,
           "userId": currentUser.id,
-          "subTitle":"${currentUser.username} postunu begendi!",
-          "title":"Yeni begeni",
+          "subTitle": "${currentUser.username} postunu begendi!",
+          "title": "Yeni begeni",
           "userProfilePicture": currentUser.photoUrl,
           "postId": postId,
           "timestamp": DateTime.now(),
@@ -163,8 +167,6 @@ class _PostDetailState extends State<PostDetail> {
       });
     }
   }
-
-
 
   removeLikeFromActivityFeed() {
     bool isNotOwner = currentUser.id != ownerId;
@@ -236,15 +238,14 @@ class _PostDetailState extends State<PostDetail> {
     bool isNotPostOwner = ownerId != currentUser.id;
     if (isNotPostOwner) {
       notificationsRef.doc(ownerId).collection('userNotifications').add({
-         "type": "comment",
-          "title": "${currentUser.username} yorum yazdı:",
-          "subTitle": commentTextController.text,
-          "userId": currentUser.id,
-          "userProfilePicture": currentUser.photoUrl,
-          "postId": postId,
-          "timestamp": DateTime.now(),
-                    "username":currentUser.username,
-
+        "type": "comment",
+        "title": "${currentUser.username} yorum yazdı:",
+        "subTitle": commentTextController.text,
+        "userId": currentUser.id,
+        "userProfilePicture": currentUser.photoUrl,
+        "postId": postId,
+        "timestamp": DateTime.now(),
+        "username": currentUser.username,
       });
     }
 

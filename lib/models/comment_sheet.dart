@@ -9,7 +9,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:timeago/timeago.dart' as timeago;
-import 'pages/root.dart';
+import '../pages/root.dart';
 
 class Comments extends StatefulWidget {
   final String postId;

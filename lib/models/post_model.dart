@@ -1,17 +1,19 @@
 import 'dart:collection';
 
+import 'package:firebase_storage/firebase_storage.dart';
+
 import '/widgets/loading.dart';
 
 import '/constants.dart';
-import '/models/pages/post_details.dart';
+import '../pages/post_details.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:unicons/unicons.dart';
-import 'pages/account.dart';
-import 'pages/root.dart';
+import '../pages/account.dart';
+import '../pages/root.dart';
 import 'comment_sheet.dart';
 import 'user_model.dart';
 import 'dart:math';
@@ -82,6 +84,12 @@ deletePosts(String postId) async {
         .doc(postId)
         .get()
         .then((doc) {
+      if (doc.exists) {
+        doc.reference.delete();
+      }
+      FirebaseStorage.instance.refFromURL(doc.get('mediaUrl')).delete();
+    });
+    exploreRef.doc(postId).get().then((doc) {
       if (doc.exists) {
         doc.reference.delete();
       }
@@ -580,7 +588,7 @@ class Photo extends StatelessWidget {
               mediaUrl,
               width: Get.width,
               height: Get.height,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
             ),
             Positioned(
               top: 15,

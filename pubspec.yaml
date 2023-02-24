@@ -102,16 +102,16 @@ flutter:
   fonts:
     - family: poppins
       fonts:
-        - asset: fonts/Poppins-Regular.ttf
+        - asset: myFonts/Poppins-Regular.ttf
           style: italic
     - family: poppinsBold
       fonts:
-        - asset: fonts/Poppins-SemiBold.ttf
+        - asset: myFonts/Poppins-SemiBold.ttf
           weight: 700
 
     - family: poppinsMed
       fonts:
-        - asset: fonts/Poppins-Medium.ttf
+        - asset: myFonts/Poppins-Medium.ttf
           weight: 500
     # fonts:
     #   - family: Schyler

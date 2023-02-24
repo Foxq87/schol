@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '/models/pages/root.dart';
+import '../pages/root.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdManager {
